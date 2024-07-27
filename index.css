@@ -1,3 +1,75 @@
-#heading {
-  color: blue;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 30px;
+  box-shadow: 0px 1px 2px 2px lightgray;
+}
+
+.logo-container img {
+  width: 100px;
+}
+
+.navlinks > ul {
+  display: flex;
+  list-style-type: none;
+  gap: 50;
+}
+
+.navlinks > ul > li {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.res-logo img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.body {
+  margin: 30px 50px;
+}
+
+.res-container {
+  display: flex;
+  gap: 50;
+  flex-wrap: wrap;
+}
+
+.res-card {
+  width: 250px;
+  height: 350px;
+  box-shadow: 1px 1px 2px 2px lightgray;
+  margin-top: 10px;
+}
+
+.res-details {
+  padding: 10px;
+}
+
+.res-details h3 {
+  padding-bottom: 5px;
+}
+
+.res-details h4 {
+  padding-bottom: 5px;
+}
+
+.res-card:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+#cuisine {
+  overflow-wrap: break-word;
 }
