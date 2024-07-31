@@ -1,54 +1,6 @@
 
-import React from "react";
-import ReactDOM from 'react-dom/client';
 
-
-
-const Header=()=>{
-    return (
-        <div className="header">
-            <div className="logo-container">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdaMYtVi9_tfNcpsbGGseU6ehYgV9UeU3h7A&s" alt="food-logo" />
-            </div>
-            <div className="navlinks">
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Contact</li>
-                    <li>Cart</li>
-                    <li>Login/Signup</li>
-                </ul>
-            </div>
-        </div>
-    )
-}
-
-
-
-
-
-
-
-const RestaurantCard=({resData})=>{
-    const {name,cuisines,costForTwo,cloudinaryImageId,sla,avgRating}=resData.info
-    return(
-        <div className="res-card">
-            <div className="res-logo">
-             <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+cloudinaryImageId}/>
-            </div>
-           <div className="res-details">
-            <h3>{name}</h3>
-            <h4 id="cuisine">{cuisines.join(',')}</h4>
-            <h4>{costForTwo}</h4>
-            <h4>{sla.deliveryTime} min</h4>
-            <h4>{avgRating} stars</h4>
-           </div>
-           
-        </div>
-    )
-}
-
-const resList= [
+ const resList= [
                   {
                     "info": {
                       "id": "300366",
@@ -951,36 +903,4 @@ const resList= [
                 ]
 
 
-const Body=()=>{
-    return (
-        <div className="body">
-            <div className="search" style={{color:"blue"}}>search</div>
-            <div className="res-container">
-                {
-                    resList.map( restaurant =>(
-                        <RestaurantCard  key={restaurant.id}  resData={restaurant}/>
-                    ) )
-                }
-              </div>
-        </div>
-    )
-}
-
-
-
-
-
-
-
-const App=()=>{
-    return(
-        <div className="app">
-            <Header/>
-            <Body/>
-        </div>
-    )
-}
-
-const root =ReactDOM.createRoot(document.getElementById("root"))
-
-root.render(<App/>)
+export default resList;                
